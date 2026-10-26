@@ -70,3 +70,7 @@ $(shell mkdir -p $(OUT)/obj/SHARED_LIBRARIES/libtime_genoff_intermediates/)
 $(shell touch $(OUT)/obj/SHARED_LIBRARIES/libtime_genoff_intermediates/export_includes)
 endif
 
+
+ifeq ($(BOARD_GPS_XTRA_THREE_CALLBACKS),true)
+LOCAL_CFLAGS += -DK7_GPS_XTRA_THREE_CALLBACKS
+endif
